@@ -1,7 +1,21 @@
+
+
 let firstTime = true;
 //display cake after button click
 document.getElementById('bottom-center-button').addEventListener('click', () =>{
      document.getElementById('container').style.display = 'block';
+    //console.log("anything");
+    if(firstTime){
+     let audioCtx = new AudioContext();
+     let audio = new Audio("music/Bongo Cat - Birthday Song (TRAP REMIX).mp3");
+     console.log(audioCtx);
+     console.log(audioCtx.state);
+     console.log(audio)
+     audio.volume =.25;
+     audio.play()
+     firstTime = false;
+    } 
+    
 });
 
 //display conf
